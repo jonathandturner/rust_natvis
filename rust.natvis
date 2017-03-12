@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">  
+  <Type Name="collections::string::String">
+	<DisplayString>String {{len={vec.len}}}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>vec.len</Size>
+        <ValuePointer>*(char**)this</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+  <Type Name="collections::vec::Vec&lt;*&gt;">
+    <DisplayString>Vec {{len={len}}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>len</Size>
+        <ValuePointer>buf.ptr.pointer.__0</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>  
